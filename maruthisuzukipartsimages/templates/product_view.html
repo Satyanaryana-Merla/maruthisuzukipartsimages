@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block navbar_home %}Home{% endblock %}
+{% block login_logout_buttons %}{% endblock %}
+{% load static %}
+{% block content %}
+
+<br> </br>
+<br> </br>
+
+  <div class="card " >
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{ product_id.image.url}}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-6">
+        <div class="card-body">
+          <h8 class="fs-3 fw-bolder">Part Name : {{ product_id.Part_name}}</h8>
+          <br>
+          <h8 class="fs-5 fst-normal">Part ID : {{ product_id.part_ID}}</h8>
+          <br>
+          
+          <h8 class="fs-4 fw-bolder">Price : {{ product_id.Price}}</h8>
+          <br></br>
+          <h8 class="fs-5 fst-normal">ProductDetails : {{ product_id.productDetails}}</h8>
+            <br></br>
+          <h8 class="fs-5 fst-normal">Compatibility : {{ product_id.Compatibility}}</h8>
+          <br></br>
+          <a href="{% url 'product' %}" class="btn  btn-secondary">Back</a>
+        <div class="btns">
+      </div>
+    </div>
+  </div>
+{% endblock %}

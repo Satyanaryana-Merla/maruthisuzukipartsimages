@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block navbar_home %}Home{% endblock %}
+{% block navbar_model %}
+    Models
+{% endblock %}
+
+{% block dropdown_menu_items %}
+    <!-- Dropdown menu items -->
+    <li><a class="dropdown-item" href="{% url 'product'%}">All Products</a></li>
+    <li><hr class="dropdown-divider" /></li>
+    <li><a class="dropdown-item" href="{% url 'category' 'eirtiga' %}" target="_blank" >eirtiga</a></li>
+    <li><a class="dropdown-item" href="{% url 'category' 'shift' %}" target="_blank" >shift</a></li>
+{% endblock %}
+{% load static %}
+{% block content %}
+
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-5 justify-content-center">
+                    
+                    {% for products in products %}
+                    
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="{{ products.image.url }}" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h8 class="fw-bolder">ID: {{products.part_ID}}</h8>
+                                    <h6 class="fw-bolder">Name: {{products.Part_name}}</h6>
+                                    <h6 class="fw-bolder">Price: {{products.Price}}</h6>
+                                    <h6 class="fw-bolder">category: {{products.category}}</h6>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'product_view' products.id %}">View Product</a></div>
+                        
+                            </div>   
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        {% endblock %}
+

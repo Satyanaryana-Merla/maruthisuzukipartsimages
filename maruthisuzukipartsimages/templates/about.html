@@ -1,0 +1,42 @@
+
+{% extends 'base.html' %}
+{% block navbar_home %}Home{% endblock %}
+{% load static %}
+{% block content %}
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+      <div class="row">
+        <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+          <div class="about-img">
+            <img src="{% static 'assets/img/about.png' %}" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+          <h3>About Maruti Suzuki Parts Finder</h3>
+          <p class="fst-italic">
+            Welcome to Maruti Suzuki Parts Finder, your ultimate destination for locating genuine Maruti Suzuki parts with ease. Our website is designed to cater to all Maruti Suzuki customers, whether they're familiar with automotive parts or simply recognize them by name and part ID.
+          </p>
+          <p>
+            At Maruti Suzuki Parts Finder, we understand the importance of empowering our customers. In addition to providing a comprehensive catalog of genuine Maruti Suzuki parts, we offer a unique feature that allows customers to contribute to our platform. If you have knowledge about specific parts and possess images, part IDs, and names, you can upload them directly to our website.
+          </p>
+          <p>
+            Our platform is dedicated to fostering a community-driven approach to part identification and knowledge sharing. By allowing customers to upload images, part IDs, and names, we create a collaborative environment where everyone can contribute their expertise and help fellow Maruti Suzuki enthusiasts find the parts they need.
+          </p>
+          <p>
+            Whether you're looking to explore our catalog, contribute to our platform, or simply learn more about Maruti Suzuki automotive components, Maruti Suzuki Parts Finder is here to serve you.
+          </p>
+          <p>
+            We are committed to providing exceptional service and support to our customers. If you have any questions or need assistance, our team is here to help. Simply reach out to us through our contact form, and we'll be happy to assist you.
+          </p>
+          <p>
+            Thank you for choosing Maruti Suzuki Parts Finder. Together, we can build a comprehensive resource for Maruti Suzuki enthusiasts worldwide!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End About Section -->
+  
+{% endblock %}
+
